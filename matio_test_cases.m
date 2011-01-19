@@ -43,28 +43,12 @@ var22 = sparse(diag(complex(1:5,6:10)));
 var23 = [];
 
 if e == 'B'
-    % Change test set from 2 to 4
-%    for k=1:23
-%        eval(['matio_tc_4_' int2str(k) '_input1 = matio_tc_2_' int2str(k) '_input1;']);
-%        eval(['matio_tc_5_' int2str(k) '_input1 = matio_tc_2_' int2str(k) '_input1;']);
-%        eval(['matio_tc_7_' int2str(k) '_input1 = matio_tc_2_' int2str(k) '_input1;']);
-%        clear(sprintf('matio_tc_2_%d_input1',k));
-%    end
-    save('-v6',['matio_test_cases_uncompressed_be.mat'],'var*');%,'matio_tc_4_*');
-    save(['matio_test_cases_compressed_be.mat'],'var*');%,'matio_tc_5_*');
-    save('-v7.3',['matio_test_cases_hdf_be.mat'],'var*');%,'matio_tc_7_*');
+    save('-v6',['matio_test_cases_uncompressed_be.mat'],'var*');
+    save(['matio_test_cases_compressed_be.mat'],'var*');
+    save('-v7.3',['matio_test_cases_hdf_be.mat'],'var*');
 else
-%    for k=1:23
-%        eval(['matio_tc_3_' int2str(k) '_input1 = matio_tc_2_' int2str(k) '_input1;']);
-%        eval(['matio_tc_6_' int2str(k) '_input1 = matio_tc_2_' int2str(k) '_input1;']);
-%    end
-    save('-v6',['matio_test_cases_uncompressed_le.mat'],'var*');%,'matio_tc_2_*');
-    save(['matio_test_cases_compressed_le.mat'],'var*');%,'matio_tc_3_*');
-    save('-v7.3',['matio_test_cases_hdf_le.mat'],'var*');%,'matio_tc_6_*');
-
-    %matio_tc_1_1_input1 = matio_tc_2_1_input1;
-    %matio_tc_1_2_input1 = matio_tc_2_11_input1;
-    %matio_tc_1_3_input1 = matio_tc_2_21_input1;
-    %save('-v4','matio_test_cases_v4_le.mat','matio_tc_1_1_input1','matio_tc_1_2_input1','matio_tc_1_3_input1');
+    save('-v6',['matio_test_cases_uncompressed_le.mat'],'var*');
+    save(['matio_test_cases_compressed_le.mat'],'var*');
+    save('-v7.3',['matio_test_cases_hdf_le.mat'],'var*');
     save('-v4','matio_test_cases_v4_le.mat','var1','var11','var21');
 end
