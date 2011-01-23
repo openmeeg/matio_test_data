@@ -41,6 +41,10 @@ var20 = reshape(uint8(complex(1:20,21:40)),4,5);
 var21 = sparse(diag(1:5));
 var22 = sparse(diag(complex(1:5,6:10)));
 var23 = [];
+var24 = ['abcdefghijklmnopqrstuvwxyz';
+         'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+         '1234567890!@#$%^&*()-_=+`~';
+         '[{]}\|;:''",<.>/?          '];
 
 if e == 'B'
     save('-v6',['matio_test_cases_uncompressed_be.mat'],'var*');
