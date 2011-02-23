@@ -46,6 +46,72 @@ var24 = ['abcdefghijklmnopqrstuvwxyz';
          '1234567890!@#$%^&*()-_=+`~';
          '[{]}\|;:''",<.>/?          '];
 
+%% Structure Variables
+var25 = struct();
+var26 = repmat(struct('field1',[],'field2',[]),0,1);
+var27(1).field1 = zeros(0,1);
+var27(1).field2 = repmat(' ',0,1);
+var27(2).field1 = repmat(struct,0,1);
+var27(2).field2 = repmat({zeros(0,0)},0,1);
+var28 = [struct('field1',1,'field2',reshape(2:13,3,4));
+         struct('field1',14,'field2',reshape(15:26,3,4))];
+var29 = [struct('field1',single(1),'field2',reshape(single(2:13),3,4));
+         struct('field1',single(14),'field2',reshape(single(15:26),3,4))];
+var30 = [struct('field1',int64(1),'field2',reshape(int64(2:13),3,4));
+         struct('field1',int64(14),'field2',reshape(int64(15:26),3,4))];
+var31 = [struct('field1',uint64(1),'field2',reshape(uint64(2:13),3,4));
+         struct('field1',uint64(14),'field2',reshape(uint64(15:26),3,4))];
+var32 = [struct('field1',int32(1),'field2',reshape(int32(2:13),3,4));
+         struct('field1',int32(14),'field2',reshape(int32(15:26),3,4))];
+var33 = [struct('field1',uint32(1),'field2',reshape(uint32(2:13),3,4));
+         struct('field1',uint32(14),'field2',reshape(uint32(15:26),3,4))];
+var34 = [struct('field1',int16(1),'field2',reshape(int16(2:13),3,4));
+         struct('field1',int16(14),'field2',reshape(int16(15:26),3,4))];
+var35 = [struct('field1',uint16(1),'field2',reshape(uint16(2:13),3,4));
+         struct('field1',uint16(14),'field2',reshape(uint16(15:26),3,4))];
+var36 = [struct('field1',int8(1),'field2',reshape(int8(2:13),3,4));
+         struct('field1',int8(14),'field2',reshape(int8(15:26),3,4))];
+var37 = [struct('field1',uint8(1),'field2',reshape(uint8(2:13),3,4));
+         struct('field1',uint8(14),'field2',reshape(uint8(15:26),3,4))];
+var38 = [struct('field1',1+51*j,'field2',reshape((2:13)+(52:63)*j,3,4));
+         struct('field1',14+64*j,'field2',reshape((15:26)+(65:76)*j,3,4))];
+var39 = [struct('field1',single(1+51*j),...
+                'field2',reshape(single((2:13)+(52:63)*j),3,4));
+         struct('field1',single(14+64*j),...
+                'field2',reshape(single((15:26)+(65:76)*j),3,4))];
+var40 = [struct('field1',int64(1+51*j),...
+                'field2',reshape(int64((2:13)+(52:63)*j),3,4));
+         struct('field1',int64(14+64*j),...
+                'field2',reshape(int64((15:26)+(65:76)*j),3,4))];
+var41 = [struct('field1',uint64(1+51*j),...
+                'field2',reshape(uint64((2:13)+(52:63)*j),3,4));
+         struct('field1',uint64(14+64*j),...
+                'field2',reshape(uint64((15:26)+(65:76)*j),3,4))];
+var42 = [struct('field1',int32(1+51*j),...
+                'field2',reshape(int32((2:13)+(52:63)*j),3,4));
+         struct('field1',int32(14+64*j),...
+                'field2',reshape(int32((15:26)+(65:76)*j),3,4))];
+var43 = [struct('field1',uint32(1+51*j),...
+                'field2',reshape(uint32((2:13)+(52:63)*j),3,4));
+         struct('field1',uint32(14+64*j),...
+                'field2',reshape(uint32((15:26)+(65:76)*j),3,4))];
+var44 = [struct('field1',int16(1+51*j),...
+                'field2',reshape(int16((2:13)+(52:63)*j),3,4));
+         struct('field1',int16(14+64*j),...
+                'field2',reshape(int16((15:26)+(65:76)*j),3,4))];
+var45 = [struct('field1',uint16(1+51*j),...
+                'field2',reshape(uint16((2:13)+(52:63)*j),3,4));
+         struct('field1',uint16(14+64*j),...
+                'field2',reshape(uint16((15:26)+(65:76)*j),3,4))];
+var46 = [struct('field1',int8(1+51*j),...
+                'field2',reshape(int8((2:13)+(52:63)*j),3,4));
+         struct('field1',int8(14+64*j),...
+                'field2',reshape(int8((15:26)+(65:76)*j),3,4))];
+var47 = [struct('field1',uint8(1+51*j),...
+                'field2',reshape(uint8((2:13)+(52:63)*j),3,4));
+         struct('field1',uint8(14+64*j),...
+                'field2',reshape(uint8((15:26)+(65:76)*j),3,4))];
+
 if e == 'B'
     save('-v6',['matio_test_cases_uncompressed_be.mat'],'var*');
     save(['matio_test_cases_compressed_be.mat'],'var*');
