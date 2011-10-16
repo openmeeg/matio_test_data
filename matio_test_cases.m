@@ -177,5 +177,6 @@ else
     save('-v6',['matio_test_cases_uncompressed_le.mat'],'var*');
     save(['matio_test_cases_compressed_le.mat'],'var*');
     save('-v7.3',['matio_test_cases_hdf_le.mat'],'var*');
-    save('-v4','matio_test_cases_v4_le.mat','var1','var11','var21');
+    save('-v4','matio_test_cases_v4_le.mat','var1','var11','var21','var22',...
+         'var24');
 end
