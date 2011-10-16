@@ -173,6 +173,8 @@ if e == 'B'
     save('-v6',['matio_test_cases_uncompressed_be.mat'],'var*');
     save(['matio_test_cases_compressed_be.mat'],'var*');
     save('-v7.3',['matio_test_cases_hdf_be.mat'],'var*');
+    save('-v4','matio_test_cases_v4_be.mat','var1','var11','var21','var22',...
+         'var24');
 else
     save('-v6',['matio_test_cases_uncompressed_le.mat'],'var*');
     save(['matio_test_cases_compressed_le.mat'],'var*');
