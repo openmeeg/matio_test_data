@@ -17,6 +17,7 @@
 % Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 
 [c,m,e]=computer;
+rand('seed',931316785);
 
 var1 = reshape(1:20,4,5);
 var2 = reshape(single(1:20),4,5);
@@ -168,6 +169,43 @@ var69 = {struct('field1','abcdefghijklmnopqrstuvwxyz',...;
                 'field2','ABCDEFGHIJKLMNOPQRSTUVWXYZ');
          struct('field1','1234567890!@#$%^&*()-_=+`~',...
                 'field2','[{]}\|;:''",<.>/?          ')};
+
+int16_data = intmin('int16'):intmax('int16');
+uint16_data = intmin('uint16'):intmax('uint16');
+int8_data = int8(-128:127);
+uint8_data = uint8(0:255);
+var70 = reshape(1:32*32*32,32,32,32);
+var71 = reshape(single(1:32*32*32),32,32,32);
+var72 = reshape(int64(1:32*32*32),32,32,32);
+var73 = reshape(uint64(1:32*32*32),32,32,32);
+var74 = reshape(int32(1:32*32*32),32,32,32);
+var75 = reshape(uint32(1:32*32*32),32,32,32);
+var76 = reshape(int16(1:32*32*32),32,32,32);
+var77 = reshape(uint16(1:32*32*32),32,32,32);
+I = round(1+(numel(int8_data)-1)*rand(32,32,32));
+J = round(1+(numel(int8_data)-1)*rand(32,32,32));
+var78 = reshape(int8_data(I),32,32,32);
+I = round(1+(numel(uint8_data)-1)*rand(32,32,32));
+J = round(1+(numel(uint8_data)-1)*rand(32,32,32));
+var79 = reshape(uint8_data(I),32,32,32);
+var80 = reshape((1:2:2*32^3) + j*(2:2:2*32^3),32,32,32);
+var81 = reshape(single((1:2:2*32^3) + j*(2:2:2*32^3)),32,32,32);
+var82 = reshape(int64((1:2:2*32^3) + j*(2:2:2*32^3)),32,32,32);
+var83 = reshape(uint64((1:2:2*32^3) + j*(2:2:2*32^3)),32,32,32);
+var84 = reshape(int32((1:2:2*32^3) + j*(2:2:2*32^3)),32,32,32);
+var85 = reshape(uint32((1:2:2*32^3) + j*(2:2:2*32^3)),32,32,32);
+I = round(1+(numel(int16_data)-1)*rand(32,32,32));
+J = round(1+(numel(int16_data)-1)*rand(32,32,32));
+var86 = reshape(complex(int16_data(I),int16_data(J)),32,32,32);
+I = round(1+(numel(uint16_data)-1)*rand(32,32,32));
+J = round(1+(numel(uint16_data)-1)*rand(32,32,32));
+var87 = reshape(complex(uint16_data(I),uint16_data(J)),32,32,32);
+I = round(1+(numel(int8_data)-1)*rand(32,32,32));
+J = round(1+(numel(int8_data)-1)*rand(32,32,32));
+var88 = reshape(complex(int8_data(I),int8_data(J)),32,32,32);
+I = round(1+(numel(uint8_data)-1)*rand(32,32,32));
+J = round(1+(numel(uint8_data)-1)*rand(32,32,32));
+var89 = reshape(complex(uint8_data(I),uint8_data(J)),32,32,32);
 
 if e == 'B'
     save('-v6',['matio_test_cases_uncompressed_be.mat'],'var*');
