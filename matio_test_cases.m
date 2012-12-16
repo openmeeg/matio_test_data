@@ -207,6 +207,13 @@ I = round(1+(numel(uint8_data)-1)*rand(32,32,32));
 J = round(1+(numel(uint8_data)-1)*rand(32,32,32));
 var89 = reshape(complex(uint8_data(I),uint8_data(J)),32,32,32);
 
+var90 = tril(true(5));
+var91 = [struct('field1',logical(mod(reshape(0:19,4,5),2)),...
+                'field2',~mod(reshape(0:19,4,5),2));...
+         struct('field1',tril(true(5)),'field2',triu(true(5)))];
+var92 = {logical(mod(reshape(0:19,4,5),2));~mod(reshape(0:19,4,5),2);...
+        tril(true(5));triu(true(5))};
+
 if e == 'B'
     save('-v6',['matio_test_cases_uncompressed_be.mat'],'var*');
     save(['matio_test_cases_compressed_be.mat'],'var*');
