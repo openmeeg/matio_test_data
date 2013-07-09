@@ -24,6 +24,11 @@
 % SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 [c,m,e]=computer;
+if e == 'B'
+  e_str = '_be';
+else
+  e_str = '_le';
+end
 rand('seed',931316785);
 
 var1 = reshape(1:20,4,5);
@@ -221,16 +226,8 @@ var91 = [struct('field1',logical(mod(reshape(0:19,4,5),2)),...
 var92 = {logical(mod(reshape(0:19,4,5),2));~mod(reshape(0:19,4,5),2);...
         tril(true(5));triu(true(5))};
 
-if e == 'B'
-    save('-v6',['matio_test_cases_uncompressed_be.mat'],'var*');
-    save(['matio_test_cases_compressed_be.mat'],'var*');
-    save('-v7.3',['matio_test_cases_hdf_be.mat'],'var*');
-    save('-v4','matio_test_cases_v4_be.mat','var1','var11','var21','var22',...
-         'var24');
-else
-    save('-v6',['matio_test_cases_uncompressed_le.mat'],'var*');
-    save(['matio_test_cases_compressed_le.mat'],'var*');
-    save('-v7.3',['matio_test_cases_hdf_le.mat'],'var*');
-    save('-v4','matio_test_cases_v4_le.mat','var1','var11','var21','var22',...
-         'var24');
-end
+save('-v6',['matio_test_cases_uncompressed' e_str '.mat'],'var*');
+save(['matio_test_cases_compressed' e_str '.mat'],'var*');
+save('-v7.3',['matio_test_cases_hdf' e_str '.mat'],'var*');
+save('-v4',['matio_test_cases_v4' e_str '.mat'],'var1','var11','var21',...
+     'var22','var24');
