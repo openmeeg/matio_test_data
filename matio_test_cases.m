@@ -231,3 +231,6 @@ save(['matio_test_cases_compressed' e_str '.mat'],'var*');
 save('-v7.3',['matio_test_cases_hdf' e_str '.mat'],'var*');
 save('-v4',['matio_test_cases_v4' e_str '.mat'],'var1','var11','var21',...
      'var22','var24');
+
+x = pi;
+save('-v4',['small_v4' e_str '.mat'],'x');
